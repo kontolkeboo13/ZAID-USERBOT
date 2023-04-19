@@ -21,7 +21,7 @@ def get_arg(message: Message):
     return " ".join(split[1:])
 
 @Client.on_message(
-    filters.command(["gcast"], ".") & (filters.me | filters.user(SUDO_USER))
+    filters.command(["gikes"], ".") & (filters.me | filters.user(SUDO_USER))
 )
 async def gcast_cmd(client: Client, message: Message):
     if message.reply_to_message or get_arg(message):
@@ -90,7 +90,7 @@ add_command_help(
     "broadcast",
     [
         [
-            "gcast [text/reply]",
+            "gikes [text/reply]",
             "Sending Global Broadcast messages to all groups you are logged into. (Can Send Media/Sticker)",
         ],
         [
